@@ -12,7 +12,7 @@ public class Main {
         var max = 30;
         var numberOfPeople = 100;
         // Using Person class which uses lombok
-        List<Person> people = new ArrayList<>(100);
+        List<Person> people = new ArrayList<>(numberOfPeople);
         Comparator<Person> compare = Comparator
                 .comparing(Person::getAge)
                 .thenComparing(Person::getFirstName);
@@ -33,7 +33,7 @@ public class Main {
         Comparator<Person2> compare2 = Comparator
                 .comparing(Person2::getAge)
                 .thenComparing(Person2::getFirstName);
-        List<Person2> people2 = new ArrayList<>(100);
+        List<Person2> people2 = new ArrayList<>(numberOfPeople);
         for (int i = 1; i <= numberOfPeople; i++) {
             int randomNum = rand.nextInt((max - min) + 1) + min;
             var person = new Person2(String.format("yacine %d", i), String.format("bka %d", i), randomNum);
